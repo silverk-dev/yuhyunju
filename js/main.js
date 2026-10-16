@@ -10,8 +10,8 @@
   });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && nav.classList.contains('open')) { closeMenu(); toggle.focus(); } });
   nav.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
-  const page = location.pathname.split('/').pop() || 'index.html';
-  nav.querySelectorAll('a').forEach(a => { if (a.getAttribute('href') === page || (page === 'exhibition.html' && a.getAttribute('href') === 'exhibitions.html')) a.setAttribute('aria-current', 'page'); });
+  const page = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
+  nav.querySelectorAll('a').forEach(a => { const target = new URL(a.href, location.href).pathname.split('/').pop().replace(/\.html$/, ''); if (target === page || (page === 'exhibition' && target === 'exhibitions')) a.setAttribute('aria-current', 'page'); });
   // 안전한 텍스트 삽입에 쓰는 공통 헬퍼.
   window.makeElement = (tag, text, className) => {
     const el = document.createElement(tag);
