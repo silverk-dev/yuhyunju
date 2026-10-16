@@ -84,3 +84,16 @@ Netlify 관리: https://app.netlify.com/projects/yuhyunju
 사이트 주소: https://yuhyunju.netlify.app
 
 2026-10-16 main 브랜치에서 첫 배포 성공을 확인했습니다. 변경 사항을 main에 저장하면 Netlify가 자동으로 새 배포를 시작합니다. 배포 완료 후 사이트를 새로고침하면 수정 내용을 볼 수 있습니다.
+
+## 한국어 / 영어
+
+상단 KO / EN 링크로 전환합니다. `?lang=ko`와 `?lang=en`으로 언어를 지정한 링크를 공유할 수 있습니다. 전시 상세의 id와 페이지 내 위치도 언어 전환 시 유지됩니다. 선택 언어는 브라우저에 저장되며, 저장을 허용하지 않는 환경에서는 URL의 언어 값을 사용합니다. 언어가 지정되지 않고 저장된 설정도 없으면 한국어로 시작합니다.
+
+- 한국어 콘텐츠: 기존 HTML 및 `js/data.js`
+- 영어 콘텐츠: `js/translations.js` (`static`은 화면 문구, `exhibitions`는 전시 id별 번역, `research`는 한국어 원제별 번역)
+- 전환 처리: `js/i18n.js`
+
+새 전시를 추가하면 data.js와 같은 id로 translations.js의 exhibitions에도 영어 제목·설명·장소·기간·출처를 추가합니다. 연구 자료는 한국어 원제를 키로 사용하므로 목록 순서를 바꾸어도 번역이 다른 자료에 붙지 않습니다. 원제 변경 시 해당 키도 함께 수정합니다. 공식 영문명이 확인되지 않은 제목은 참고용 번역이라는 안내를 표시합니다. 포스터 등 원본 사진 안의 문자는 이미지 기록을 보존하기 위해 번역하지 않았습니다.
+
+한국어 바로가기: https://yuhyunju.netlify.app/?lang=ko
+영어 바로가기: https://yuhyunju.netlify.app/?lang=en
