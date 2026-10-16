@@ -60,9 +60,9 @@ Chrome, Edge, Safari, Firefox 최신 버전 권장. Contact는 이메일 프로�
 
 ## 정적 호스팅
 
-이 폴더 전체를 정적 호스팅의 공개 폴더로 업로드하면 됩니다. 빌드 명령은 없습니다. 이번 결과물은 로컬 ZIP이며 온라인 배포는 수행하지 않았습니다. sources 원본, 주거지 주소, 개인 사무실 주소는 포함하지 않았습니다.
+직접 HTML을 여는 로컬 실행에는 빌드가 필요하지 않습니다. Netlify에서는 아래 빌드 명령으로 웹사이트 파일만 dist에 모아 배포합니다. sources 원본, 주거지 주소, 개인 사무실 주소는 포함하지 않았습니다.
 
-## GitHub → Netlify 자동 배포 준비
+## GitHub → Netlify 자동 배포
 
 저장소 루트는 이 `yu-hyunju-portfolio` 폴더입니다. `sources/`나 외부 원본 자료는 저장소에 올리지 않습니다.
 
@@ -77,4 +77,10 @@ Chrome, Edge, Safari, Firefox 최신 버전 권장. Contact는 이메일 프로�
 
 로컬에서 빌드를 검사하려면 Node.js가 있는 환경에서 `node scripts/build.mjs`를 실행합니다. dist는 자동 생성되므로 직접 수정하지 않습니다. 수정은 원본 HTML/CSS/JS에서 진행한 후 GitHub에 반영합니다. 브라우저에 열린 사이트는 새 배포가 끝나면 새로고침해 확인합니다.
 
-이 설정 파일을 추가한 시점에는 GitHub 저장소 생성 및 Netlify 자동 배포 연결이 아직 완료되지 않았습니다.
+GitHub 저장소: https://github.com/silverk-dev/yuhyunju
+
+Netlify 관리: https://app.netlify.com/projects/yuhyunju
+
+사이트 주소: https://yuhyunju.netlify.app
+
+2026-10-16 main 브랜치에서 첫 배포 성공을 확인했습니다. 변경 사항을 main에 저장하면 Netlify가 자동으로 새 배포를 시작합니다. 배포 완료 후 사이트를 새로고침하면 수정 내용을 볼 수 있습니다.
