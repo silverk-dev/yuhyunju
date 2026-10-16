@@ -8,7 +8,7 @@
   const grid = document.querySelector('[data-exhibitions]');
   const card = item => {
     const article = el('article', undefined, 'card');
-    const a = el('a'); a.href = link('exhibition.html?id=' + encodeURIComponent(item.id));
+    const a = el('a'); a.href = link('index.html?page=exhibition&id=' + encodeURIComponent(item.id));
     const frame = el('div', undefined, 'card-image');
     const img = el('img'); img.src = item.image; img.alt = item.title + t(' 대표 이미지', ' — cover image'); img.width = 1200; img.height = 1200; img.loading = 'lazy';
     frame.append(img); a.append(frame, el('h3', item.title), el('p', item.yearLabel)); article.append(a); return article;
@@ -30,7 +30,7 @@
   const detail = document.querySelector('#exhibition-detail'); if (!detail) return;
   const id = new URLSearchParams(location.search).get('id');
   const item = items.find(i => i.id === id);
-  const back = el('a', t('← 전시 목록', '← All exhibitions'), 'text-link'); back.href = link('exhibitions.html'); detail.append(back);
+  const back = el('a', t('← 전시 목록', '← All exhibitions'), 'text-link'); back.href = link('index.html?page=exhibitions'); detail.append(back);
   if (!item) { detail.append(el('h1', t('전시를 찾을 수 없습니다.', 'Exhibition not found.'), 'detail-head'), el('p', t('전시 목록에서 다시 선택해 주세요.', 'Please choose an exhibition from the archive.'))); return; }
   document.title = item.title + t(' | 유현주', ' | Yu Hyunju');
   document.querySelector('meta[name="description"]').content = item.description;
@@ -53,6 +53,6 @@
   dialog.addEventListener('click', event => { if (event.target === dialog) { const rect=dialog.getBoundingClientRect(); if(event.clientX<rect.left || event.clientX>rect.right || event.clientY<rect.top || event.clientY>rect.bottom) dialog.close(); } });
   const next=el('nav',undefined,'detail-nav'); next.setAttribute('aria-label',t('다른 전시', 'Other exhibitions'));
   const index=items.indexOf(item);
-  [[index-1,t('← 이전 전시','← Previous exhibition')],[index+1,t('다음 전시 →','Next exhibition →')]].forEach(([n,label]) => { if(items[n]) {const a=el('a',label+' · '+items[n].title);a.href=link('exhibition.html?id='+encodeURIComponent(items[n].id));next.append(a);} });
+  [[index-1,t('← 이전 전시','← Previous exhibition')],[index+1,t('다음 전시 →','Next exhibition →')]].forEach(([n,label]) => { if(items[n]) {const a=el('a',label+' · '+items[n].title);a.href=link('index.html?page=exhibition&id='+encodeURIComponent(items[n].id));next.append(a);} });
   detail.append(next);
 })();

@@ -26,7 +26,7 @@
     node.replaceChildren(document.createTextNode(t('유현주', 'Yu Hyunju')), Object.assign(document.createElement('span'), {textContent:t('YU HYUNJU', 'CURATOR & RESEARCHER')}));
   });
   const titles = {index:'Art & Ecological Aesthetics',exhibitions:'Exhibitions',exhibition:'Exhibition',about:'About',research:'Research & Writings'};
-  const page = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
+  const page = window.CURRENT_PAGE || 'index';
   if (en) document.title = (titles[page] || titles.index) + ' | Yu Hyunju';
   document.querySelector('meta[name="description"]').content = t('유현주 전시기획자와 미학 연구자의 전시, 생태미학 연구 및 저술 아카이브.', 'Exhibitions, ecological aesthetics research and writings by curator and aesthetics researcher Yu Hyunju.');
   document.querySelector('#navigation').setAttribute('aria-label', t('주 메뉴', 'Main navigation'));
