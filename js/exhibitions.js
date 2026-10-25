@@ -15,7 +15,18 @@
   };
   const render = filter => {
     const results = items.filter(item => filter === 'all' || (filter === 'unknown' ? item.year === null : String(item.year) === filter));
-    grid.replaceChildren(...results.map(card));
+    grid.classList.remove('grid');
+    grid.classList.add('exhibition-groups');
+    const groups = [
+      [t('지속가능한 도시-꽃 시리즈', 'Sustainable City–Flower Series'), results.filter(item => item.series === 'city-flower')],
+      [t('그 밖의 기획전시', 'Other Curated Exhibitions'), results.filter(item => item.series !== 'city-flower')]
+    ];
+    grid.replaceChildren(...groups.filter(([, entries]) => entries.length).map(([title, entries]) => {
+      const section = el('section', undefined, 'exhibition-group');
+      const heading = el('h2', title);
+      const cards = el('div', undefined, 'grid compact-exhibitions');
+      cards.append(...entries.map(card)); section.append(heading, cards); return section;
+    }));
     const status = document.querySelector('#result-count'); if (status) status.textContent = t(results.length + '개의 전시', results.length + (results.length === 1 ? ' exhibition' : ' exhibitions'));
   };
   if (grid) {
@@ -36,7 +47,7 @@
   document.querySelector('meta[name="description"]').content = item.description;
   const head = el('header', undefined, 'detail-head'); head.append(el('p', item.yearLabel + ' / EXHIBITION', 'eyebrow'), el('h1', item.title), el('p', item.subtitle, 'subtitle')); detail.append(head);
   const info = el('div', undefined, 'detail-info'); const dl = el('dl');
-  [[t('기간', 'Dates'), item.date], [t('장소', 'Venue'), item.venue], [t('자료 출처', 'Source'), item.source]].forEach(([label,value]) => dl.append(el('dt',label),el('dd',value)));
+  [[t('기간', 'Dates'), item.date], [t('장소', 'Venue'), item.venue], [t('역할', 'Role'), item.role], [t('주관·후원', 'Organisers & Support'), item.support], [t('기획 활동 기간', 'Curatorial activity period'), item.careerPeriod], [t('자료 출처', 'Source'), item.source]].filter(([, value]) => value).forEach(([label,value]) => dl.append(el('dt',label),el('dd',value)));
   const text = el('div'); text.append(el('h2', t('전시 소개', 'About the exhibition')), el('p', item.description, 'body-copy'));
   if (item.note) text.append(el('p', item.note, 'note'));
   if (window.I18N?.en) text.append(el('p', 'English titles translated from Korean are provided for reference; they are not necessarily official titles.', 'translation-note'));

@@ -23,13 +23,16 @@
     if (className) el.className = className;
     return el;
   };
-  document.querySelectorAll('[data-research]').forEach(container => {
-    const limit = Number(container.dataset.limit) || PORTFOLIO.research.length;
-    PORTFOLIO.research.slice(0, limit).forEach(item => {
+  document.querySelectorAll('[data-research], [data-collection]').forEach(container => {
+    const collection = container.dataset.collection || 'research';
+    const items = PORTFOLIO[collection] || [];
+    const limit = Number(container.dataset.limit) || items.length;
+    items.slice(0, limit).forEach(item => {
       const row = makeElement('article', undefined, 'research-row');
       const content = makeElement('div');
       content.append(makeElement('h3', item.title), makeElement('p', item.publication));
-      row.append(makeElement('p', item.year, 'year'), content, makeElement('small', item.source));
+      row.append(makeElement('p', item.year, 'year'), content);
+      if (item.source) row.append(makeElement('small', item.source));
       container.append(row);
     });
   });

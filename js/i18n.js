@@ -25,7 +25,7 @@
   document.querySelectorAll('.brand').forEach(node => {
     node.replaceChildren(document.createTextNode(t('유현주', 'Yu Hyunju')), Object.assign(document.createElement('span'), {textContent:t('YU HYUNJU', 'CURATOR & RESEARCHER')}));
   });
-  const titles = {index:'Art & Ecological Aesthetics',exhibitions:'Exhibitions',exhibition:'Exhibition',about:'About',research:'Research & Writings'};
+  const titles = {index:'Art & Ecological Aesthetics',exhibitions:'Exhibitions',exhibition:'Exhibition',critique:'Critique',about:'About',research:'Research & Writings'};
   const page = window.CURRENT_PAGE || 'index';
   if (en) document.title = (titles[page] || titles.index) + ' | Yu Hyunju';
   document.querySelector('meta[name="description"]').content = t('유현주 전시기획자와 미학 연구자의 전시, 생태미학 연구 및 저술 아카이브.', 'Exhibitions, ecological aesthetics research and writings by curator and aesthetics researcher Yu Hyunju.');
@@ -50,5 +50,8 @@
   if (en) {
     PORTFOLIO.exhibitions = PORTFOLIO.exhibitions.map(item => ({...item, ...TRANSLATIONS.exhibitions[item.id], yearLabel:item.year === null ? 'Year to be confirmed' : item.yearLabel}));
     PORTFOLIO.research = PORTFOLIO.research.map(item => ({...item, ...TRANSLATIONS.research[item.title]}));
+    for (const [key, entries] of Object.entries(TRANSLATIONS.collections || {})) {
+      PORTFOLIO[key] = (PORTFOLIO[key] || []).map(item => ({...item, ...entries[item.title]}));
+    }
   }
 })();
