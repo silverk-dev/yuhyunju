@@ -1,4 +1,4 @@
-// Portfolio content — maintain Korean originals and English translations separately.
+// English translations for the Korean archive.
 window.TRANSLATIONS = {
   "static": {
     "skip": {
@@ -412,6 +412,18 @@ window.TRANSLATIONS = {
     "critiqueEmpty": {
       "ko": "비평문과 전시서문을 정리하고 있습니다.",
       "en": "Critical writing and exhibition essays are being prepared for this archive."
+    },
+    "videosHeading": {
+      "ko": "영상",
+      "en": "Video"
+    },
+    "seminarVideoTitle": {
+      "ko": "국제 생태 예술 세미나",
+      "en": "International Ecological Art Seminar"
+    },
+    "watchVideo": {
+      "ko": "YouTube에서 보기 ↗",
+      "en": "Watch on YouTube ↗"
     }
   },
   "exhibitions": {

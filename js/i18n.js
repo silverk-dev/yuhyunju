@@ -23,7 +23,7 @@
     if (copy) node.innerHTML = copy[lang]; // Only locally authored static copy, never user input.
   });
   document.querySelectorAll('.brand').forEach(node => {
-    node.replaceChildren(document.createTextNode(t('유현주', 'Yu Hyunju')), Object.assign(document.createElement('span'), {textContent:t('YU HYUNJU', 'CURATOR & RESEARCHER')}));
+    node.textContent = t('유현주 | 생태미학과 예술', 'HyunJu Yu | Eco-Aesthetics & Art');
   });
   const titles = {index:'Art & Ecological Aesthetics',exhibitions:'Exhibitions',exhibition:'Exhibition',critique:'Critique',about:'About',research:'Research & Writings'};
   const page = window.CURRENT_PAGE || 'index';
