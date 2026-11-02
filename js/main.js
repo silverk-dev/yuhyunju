@@ -36,4 +36,30 @@
       container.append(row);
     });
   });
+  // Add future critiques in data.js; the year options are generated automatically.
+  const critiques = document.querySelector('[data-critiques]');
+  if (critiques) {
+    const {t} = window.I18N;
+    const items = [...(PORTFOLIO.critiques || [])].sort((a, b) => b.year - a.year);
+    const select = document.querySelector('#critique-year');
+    [...new Set(items.map(item => item.year))].forEach(year => {
+      const option = makeElement('option', String(year)); option.value = String(year); select.append(option);
+    });
+    const render = year => {
+      const results = items.filter(item => year === 'all' || String(item.year) === year);
+      critiques.replaceChildren(...results.map(item => {
+        const row = makeElement('article', undefined, 'research-row critique-row');
+        const heading = makeElement('h2');
+        const a = makeElement('a', item.title);
+        a.href = item.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+        a.append(makeElement('span', ' ↗', 'external-arrow'));
+        a.setAttribute('aria-label', item.title + t(' (새 탭에서 열기)', ' (opens in a new tab)'));
+        heading.append(a); row.append(makeElement('p', String(item.year), 'year'), heading); return row;
+      }));
+      if (!results.length) critiques.append(makeElement('p', t('해당 연도의 비평이 없습니다.', 'No critiques for this year.'), 'archive-empty'));
+      document.querySelector('#critique-count').textContent = t(results.length + '개의 비평', results.length + (results.length === 1 ? ' critique' : ' critiques'));
+    };
+    select.addEventListener('change', () => render(select.value));
+    render('all');
+  }
 })();

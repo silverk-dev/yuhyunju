@@ -739,6 +739,38 @@ window.TRANSLATIONS = {
         "title": "Horizons of Open Aesthetics",
         "publication": "Samun Nanjeok · Co-author"
       }
+    },
+    "critiques": {
+      "지구에 대한 감각을 일깨우는 생태예술가로서의 정재철": {
+        "title": "Jung Jaechul as an Ecological Artist Awakening Our Sense of the Earth"
+      },
+      "'끝섬', 바깥이 중심이 되는 헤테로토피아로의 여행": {
+        "title": "‘End Island’: A Journey to a Heterotopia Where the Outside Becomes the Centre"
+      },
+      "지구라는 육체를 횡단하는 물질들의 생태교향곡: 흙 되기, 인간 되기, 문화의 자기조직화": {
+        "title": "An Ecological Symphony of Matter Traversing the Body of the Earth: Becoming Soil, Becoming Human, and the Self-Organisation of Culture"
+      },
+      "리좀의 예술과 생태적 사유의 미학": {
+        "title": "Rhizomatic Art and the Aesthetics of Ecological Thought"
+      },
+      "박경희의 복숭아, 자연과의 합일을 꿈꾸는 생태적 초현실주의": {
+        "title": "Park Kyunghee’s Peaches: Ecological Surrealism Dreaming of Unity with Nature"
+      },
+      "카오스로서의 자연에게 생명의 진화를 묻다": {
+        "title": "Asking Nature as Chaos about the Evolution of Life"
+      },
+      "문명 속의 불안 — 송인의 ‘페르소나’ 연작에 대한 소고": {
+        "title": "Anxiety in Civilisation: Reflections on Song In’s Persona Series"
+      },
+      "포스트-판화, 감성적 지표(Index)에서 문화적 도상(Icon)으로": {
+        "title": "Post-Printmaking: From an Emotional Index to a Cultural Icon"
+      },
+      "기후변화대응화학예술특별전 〈화성에서 온 메시지〉": {
+        "title": "A Message from Mars: A Special Chemistry and Art Exhibition Responding to Climate Change"
+      },
+      "디지털 숭고의 풍경, “Vision Scenery”": {
+        "title": "A Landscape of the Digital Sublime, “Vision Scenery”"
+      }
     }
   }
 };

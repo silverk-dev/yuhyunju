@@ -1,4 +1,4 @@
-// Portfolio content — maintain Korean originals and English translations separately.
+// 콘텐츠 수정: exhibitions는 전시, critiques는 비평 목록입니다.
 window.PORTFOLIO = {
   "profile": {
     "name": "유현주",
@@ -488,6 +488,80 @@ window.PORTFOLIO = {
       "title": "『열린 미학의 지평』",
       "publication": "사문난적 · 공저",
       "source": ""
+    }
+  ],
+  "critiques": [
+    {
+      "id": "jung-jaechul-2021",
+      "year": 2021,
+      "title": "지구에 대한 감각을 일깨우는 생태예술가로서의 정재철",
+      "url": "https://www.arko.or.kr/artcenter/board/view/510?bid=462&cid=711018"
+    },
+    {
+      "id": "jung-hyejung-end-island-2021",
+      "year": 2021,
+      "title": "'끝섬', 바깥이 중심이 되는 헤테로토피아로의 여행",
+      "url": "http://www.hjjung.com/index.php/e/articles/"
+    },
+    {
+      "id": "traversing-matter-2021",
+      "year": 2021,
+      "title": "지구라는 육체를 횡단하는 물질들의 생태교향곡: 흙 되기, 인간 되기, 문화의 자기조직화",
+      "url": "https://www.arko.or.kr/artcenter/board/view/510?bid=462&cid=711387"
+    },
+    {
+      "id": "kim-juhwan-rhizome-2025",
+      "year": 2025,
+      "title": "리좀의 예술과 생태적 사유의 미학",
+      "url": "https://www.arthub.co.kr/sub01/board05_view.htm?No=55075"
+    },
+    {
+      "id": "park-kyunghee-peaches-2025",
+      "year": 2025,
+      "title": "박경희의 복숭아, 자연과의 합일을 꿈꾸는 생태적 초현실주의",
+      "url": "documents/critiques/park-kyunghee-2025.pdf",
+      "format": "pdf",
+      "yearSource": "기존 비평 아카이브 목록 및 원본 파일명(20251207) 기준"
+    },
+    {
+      "id": "kang-juri-2021",
+      "year": 2021,
+      "title": "카오스로서의 자연에게 생명의 진화를 묻다",
+      "url": "documents/critiques/kang-juri-2021.pdf",
+      "format": "pdf",
+      "yearSource": "사용자 확인"
+    },
+    {
+      "id": "song-in-2026",
+      "year": 2026,
+      "title": "문명 속의 불안 — 송인의 ‘페르소나’ 연작에 대한 소고",
+      "url": "documents/critiques/song-in-2026.pdf",
+      "format": "pdf",
+      "yearSource": "사용자 확인"
+    },
+    {
+      "id": "post-printmaking-2018",
+      "year": 2018,
+      "title": "포스트-판화, 감성적 지표(Index)에서 문화적 도상(Icon)으로",
+      "url": "documents/critiques/post-printmaking-2018.pdf",
+      "format": "pdf",
+      "yearSource": "사용자 확인"
+    },
+    {
+      "id": "message-from-mars-critique-2017",
+      "year": 2017,
+      "title": "기후변화대응화학예술특별전 〈화성에서 온 메시지〉",
+      "url": "documents/critiques/message-from-mars-2017.pdf",
+      "format": "pdf",
+      "yearSource": "사용자 확인"
+    },
+    {
+      "id": "vision-scenery-2018",
+      "year": 2018,
+      "title": "디지털 숭고의 풍경, “Vision Scenery”",
+      "url": "documents/critiques/vision-scenery-2018.pdf",
+      "format": "pdf",
+      "yearSource": "사용자 확인"
     }
   ]
 };
