@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>전시와 생태미학 | 유현주</title>
 <meta name="description" content="유현주 전시기획자와 미학 연구자의 전시, 생태미학 연구 및 저술 아카이브.">
-<link rel="stylesheet" href="css/common.css?v=20261025-3">
-<link rel="stylesheet" href="css/style.css?v=20261025-3">
-<link rel="stylesheet" href="css/responsive.css?v=20261025-3">
-<script defer src="js/router.js?v=20261025-3"></script>
-<script defer src="js/data.js?v=20261025-3"></script>
-<script defer src="js/translations.js?v=20261025-3"></script>
-<script defer src="js/i18n.js?v=20261025-3"></script>
-<script defer src="js/main.js?v=20261025-3"></script>
-<script defer src="js/exhibitions.js?v=20261025-3"></script>
+<link rel="stylesheet" href="css/common.css?v=20261102-5">
+<link rel="stylesheet" href="css/style.css?v=20261102-5">
+<link rel="stylesheet" href="css/responsive.css?v=20261102-5">
+<script defer src="js/router.js?v=20261102-5"></script>
+<script defer src="js/data.js?v=20261102-5"></script>
+<script defer src="js/translations.js?v=20261102-5"></script>
+<script defer src="js/i18n.js?v=20261102-5"></script>
+<script defer src="js/main.js?v=20261102-5"></script>
+<script defer src="js/exhibitions.js?v=20261102-5"></script>
 </head>
 <body><a class="skip" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
 <header class="site-header wrap"><a class="brand" href="index.html">유현주 | 생태미학과 예술</a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation" data-i18n="menu">메뉴</button><nav id="navigation" aria-label="주 메뉴"><a href="index.html?page=exhibitions">Exhibitions</a><a href="index.html?page=critique">Critique</a><a href="index.html?page=research">Research</a><a href="index.html?page=about">About</a><a href="mailto:adorno21@naver.com">Contact ↗</a></nav><div class="language-switch" role="group" aria-label="언어 선택"><a href="?lang=ko" data-language="ko" lang="ko" aria-label="한국어">KO</a><span aria-hidden="true">/</span><a href="?lang=en" data-language="en" lang="en" aria-label="English">EN</a></div>
@@ -41,5 +41,5 @@
 </section>
 </template>
 <template id="view-research"><section class="section wrap page-start"><p class="eyebrow">TEXTS & IDEAS</p><h1>Research</h1><p class="lead" data-i18n="researchIntro">생태미학과 동시대미술을 잇는 연구와 글.</p><nav class="archive-index" aria-label="Research sections"><a href="#videos" data-i18n="videosHeading">영상</a><a href="#seminars" data-i18n="seminarsHeading">세미나·학술행사</a><a href="#researchProjects" data-i18n="projectsHeading">연구·비평 사업</a><a href="#books" data-i18n="booksHeading">저서</a><a href="#papers" data-i18n="papersHeading">논문</a></nav><section class="archive-group research-video" id="videos"><h2 data-i18n="videosHeading">영상</h2><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/IdsJvhf70nA" title="국제 생태 예술 세미나 / International Ecological Art Seminar" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="video-caption"><div><h3 data-i18n="seminarVideoTitle">국제 생태 예술 세미나</h3><p>International Ecological Art Seminar · 28:22</p></div><a class="text-link" href="https://youtu.be/IdsJvhf70nA" target="_blank" rel="noopener noreferrer" data-i18n="watchVideo">YouTube에서 보기 ↗</a></div></section><section class="archive-group" id="seminars"><h2 data-i18n="seminarsHeading">세미나·학술행사</h2><div data-collection="seminars"></div></section><section class="archive-group" id="researchProjects"><h2 data-i18n="projectsHeading">연구·비평 사업</h2><div data-collection="researchProjects"></div></section><section class="archive-group" id="books"><h2 data-i18n="booksHeading">저서</h2><div data-collection="books"></div></section><section class="archive-group" id="papers"><h2 data-i18n="papersHeading">논문</h2><div data-research></div></section><p class="archive-caption" data-i18n="referenceTitles">영문 제목은 참고용 번역입니다.</p></section></template>
-<template id="view-critique"><section class="section wrap page-start"><p class="eyebrow">CRITICAL WRITING</p><h1>Critique</h1><p class="lead" data-i18n="critiqueIntro">비평과 전시서문</p><div class="archive-empty"><p data-i18n="critiqueEmpty">비평문과 전시서문을 정리하고 있습니다.</p></div></section></template>
+<template id="view-critique"><section class="section wrap page-start"><p class="eyebrow">CRITICAL WRITING</p><h1>Critique</h1><p class="lead" data-i18n="critiqueIntro">비평과 전시서문</p><div class="filters"><label for="critique-year" data-i18n="year">연도</label><select id="critique-year"><option value="all" data-i18n="allYears">전체 연도</option></select><p id="critique-count" role="status" aria-live="polite"></p></div><div class="critique-list" data-critiques></div></section></template>
 </body></html>
