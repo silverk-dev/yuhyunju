@@ -9,7 +9,7 @@ await mkdir(output, { recursive: true });
 for (const name of ['exhibitions.html', 'exhibition.html', 'about.html', 'research.html']) {
   try { await unlink(join(output, name)); } catch (error) { if (error.code !== 'ENOENT') throw error; }
 }
-for (const file of ['index.html', 'css', 'js', 'images']) {
+for (const file of ['index.html', 'css', 'js', 'images', 'documents']) {
   await cp(join(root, file), join(output, file), { recursive: true });
 }
 await writeFile(join(output, '_headers'), '/js/*\n  Cache-Control: public, max-age=0, must-revalidate\n/css/*\n  Cache-Control: public, max-age=0, must-revalidate\n');
