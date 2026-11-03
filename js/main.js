@@ -14,7 +14,7 @@
   nav.querySelectorAll('a').forEach(a => {
     const url = new URL(a.href, location.href);
     const target = url.searchParams.get('page') || url.pathname.split('/').pop().replace(/\.html$/, '');
-    if (target === page || (page === 'exhibition' && target === 'exhibitions')) a.setAttribute('aria-current', 'page');
+    if (target === page || (page === 'exhibition' && target === 'exhibitions') || (page === 'reading' && target === 'critique')) a.setAttribute('aria-current', 'page');
   });
   // 안전한 텍스트 삽입에 쓰는 공통 헬퍼.
   window.makeElement = (tag, text, className) => {
@@ -30,7 +30,20 @@
     items.slice(0, limit).forEach(item => {
       const row = makeElement('article', undefined, 'research-row');
       const content = makeElement('div');
-      content.append(makeElement('h3', item.title), makeElement('p', item.publication));
+      const heading = makeElement('h3');
+      const references = item.links || [];
+      const referenceLink = (label, url) => {
+        const a = makeElement('a', label + ' ↗'); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+        a.setAttribute('aria-label', label + window.I18N.t(' (새 탭에서 열기)', ' (opens in a new tab)')); return a;
+      };
+      if (references.length) heading.append(referenceLink(item.title, references[0].url));
+      else heading.textContent = item.title;
+      content.append(heading, makeElement('p', item.publication));
+      if (references.length > 1) {
+        const links = makeElement('div', undefined, 'research-links');
+        references.forEach(reference => links.append(referenceLink(reference.label, reference.url)));
+        content.append(links);
+      }
       row.append(makeElement('p', item.year, 'year'), content);
       if (item.source) row.append(makeElement('small', item.source));
       container.append(row);
@@ -51,7 +64,7 @@
         const row = makeElement('article', undefined, 'research-row critique-row');
         const heading = makeElement('h2');
         const a = makeElement('a', item.title);
-        a.href = item.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+        a.href = window.I18N.link(item.url); a.target = '_blank'; a.rel = 'noopener noreferrer';
         a.append(makeElement('span', ' ↗', 'external-arrow'));
         a.setAttribute('aria-label', item.title + t(' (새 탭에서 열기)', ' (opens in a new tab)'));
         heading.append(a); row.append(makeElement('p', String(item.year), 'year'), heading); return row;
@@ -61,5 +74,32 @@
     };
     select.addEventListener('change', () => render(select.value));
     render('all');
+  }
+  const reading = document.querySelector('#reading-view');
+  if (reading) {
+    const {t, link} = window.I18N;
+    const item = (PORTFOLIO.critiques || []).find(entry => entry.id === new URLSearchParams(location.search).get('id') && entry.pages);
+    const back = makeElement('a', t('← 비평 목록', '← All critiques'), 'text-link');
+    back.href = link('index.html?page=critique'); reading.append(back);
+    if (!item) { reading.append(makeElement('h1', t('문서를 찾을 수 없습니다.', 'Document not found.'))); return; }
+    document.title = item.title + t(' | 유현주', ' | HyunJu Yu');
+    const head = makeElement('header', undefined, 'detail-head');
+    head.append(makeElement('p', item.year + ' / CRITIQUE', 'eyebrow'), makeElement('h1', item.title));
+    head.append(makeElement('p', t('열람용 문서 · ', 'Reading copy · ') + item.pages.length + t('쪽', ' pages'), 'lead'));
+    reading.append(head);
+    const pages = makeElement('div', undefined, 'reading-pages');
+    item.pages.forEach((page, i) => {
+      const figure = makeElement('figure', undefined, 'reading-page');
+      const img = makeElement('img'); img.src = page.image; img.alt = t('문서 ', 'Document page ') + (i + 1) + t('쪽', '');
+      img.loading = i === 0 ? 'eager' : 'lazy'; img.draggable = false;
+      const caption = makeElement('figcaption', (i + 1) + ' / ' + item.pages.length);
+      figure.append(img, caption);
+      if (page.text) {
+        const text = makeElement('details', undefined, 'reading-text');
+        text.append(makeElement('summary', t('텍스트로 읽기', 'Read as text')), makeElement('p', page.text)); figure.append(text);
+      }
+      pages.append(figure);
+    });
+    reading.append(pages);
   }
 })();

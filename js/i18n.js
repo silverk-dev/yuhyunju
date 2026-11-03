@@ -13,6 +13,12 @@
     const target = new URL(href, location.href);
     if (target.origin !== location.origin || !['http:', 'https:', 'file:'].includes(target.protocol)) return href;
     target.searchParams.set('lang', lang);
+    // Local preview links must keep the current asset version across navigation.
+    if (['localhost', '127.0.0.1'].includes(target.hostname)) {
+      const asset = document.querySelector('script[src^="js/i18n.js"]');
+      const version = asset && new URL(asset.src).searchParams.get('v');
+      if (version) target.searchParams.set('preview', version);
+    }
     const path = target.protocol === 'file:' ? target.pathname.split('/').pop() : target.pathname;
     return path + target.search + target.hash;
   };
@@ -25,7 +31,7 @@
   document.querySelectorAll('.brand').forEach(node => {
     node.textContent = t('유현주 | 생태미학과 예술', 'HyunJu Yu | Eco-Aesthetics & Art');
   });
-  const titles = {index:'Art & Ecological Aesthetics',exhibitions:'Exhibitions',exhibition:'Exhibition',critique:'Critique',about:'About',research:'Research & Writings'};
+  const titles = {index:'Art & Ecological Aesthetics',exhibitions:'Exhibitions',exhibition:'Exhibition',critique:'Critique',reading:'Read Critique',about:'About',research:'Research & Writings'};
   const page = window.CURRENT_PAGE || 'index';
   if (en) document.title = (titles[page] || titles.index) + ' | Yu Hyunju';
   document.querySelector('meta[name="description"]').content = t('유현주 전시기획자와 미학 연구자의 전시, 생태미학 연구 및 저술 아카이브.', 'Exhibitions, ecological aesthetics research and writings by curator and aesthetics researcher Yu Hyunju.');

@@ -52,12 +52,19 @@
   if (item.note) text.append(el('p', item.note, 'note'));
   if (window.I18N?.en) text.append(el('p', 'English titles translated from Korean are provided for reference; they are not necessarily official titles.', 'translation-note'));
   info.append(dl,text); detail.append(info,el('p',t('이미지를 선택하면 크게 볼 수 있습니다. Esc 키로 닫을 수 있습니다.', 'Select an image to enlarge it. Press Esc to close.'),'image-hint'));
-  const gallery = el('div', undefined, 'gallery'); const dialog = document.querySelector('#lightbox');
+  const gallery = el('div', undefined, 'gallery');
+  if (item.series === 'city-flower') gallery.classList.add('city-flower-gallery');
+  const dialog = document.querySelector('#lightbox');
+  if (item.series === 'city-flower') dialog.classList.add('city-flower-lightbox');
   item.gallery.forEach((src, index) => {
+    const caption = item.captions?.[src] || '';
+    const figure = el('figure');
     const button = el('button'); button.type='button'; button.setAttribute('aria-label',t(item.title+' 이미지 '+(index+1)+' 확대', 'Enlarge '+item.title+' image '+(index+1)));
-    const img = el('img'); img.src=src; img.alt=item.title+t(' — 포트폴리오 수록 이미지 ', ' — portfolio image ')+(index+1); img.loading='lazy';button.append(img);
-    button.addEventListener('click', () => { const large=dialog.querySelector('img');large.src=src;large.alt=img.alt;dialog.querySelector('p').textContent=(index+1)+' / '+item.gallery.length+' · '+item.source;dialog.showModal(); });
-    gallery.append(button);
+    const img = el('img'); img.src=src; img.alt=caption || item.title+t(' — 포트폴리오 수록 이미지 ', ' — portfolio image ')+(index+1); img.loading='lazy';button.append(img);
+    button.addEventListener('click', () => { const large=dialog.querySelector('img');large.src=src;large.alt=img.alt;dialog.querySelector('p').textContent=(index+1)+' / '+item.gallery.length+' · '+(caption || item.source);dialog.showModal(); });
+    figure.append(button);
+    if (caption) figure.append(el('figcaption', caption));
+    gallery.append(figure);
   });
   detail.append(gallery);
   dialog.querySelector('.close').addEventListener('click', () => dialog.close());

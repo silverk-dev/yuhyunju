@@ -306,7 +306,7 @@ window.TRANSLATIONS = {
       "en": "2004–2005 — Adjunct professor, College of Fine Arts, Mokwon University"
     },
     "personalHeading": {
-      "ko": "Profile",
+      "ko": "직업",
       "en": "Profile"
     },
     "profileLabel-name": {
@@ -326,12 +326,12 @@ window.TRANSLATIONS = {
       "en": "adorno21@naver.com / hyunjuyu21@gmail.com"
     },
     "profileLabel-position": {
-      "ko": "현직",
+      "ko": "직업",
       "en": "Current roles"
     },
     "profileValue-position": {
-      "ko": "한남대학교 인문과학연구소 연구교수 · 생태미학예술연구소 소장",
-      "en": "Research Professor, Institute for Humanities, Hannam University · Director, Center for Eco Aesthetics and Art Research"
+      "ko": "한남대 연구교수 · 생태미학예술 연구소 소장 · 미술비평가 · 독립 전시기획자",
+      "en": "Research Professor, Hannam University · Director, Institute of Eco Aesthetics and Art · Art Critic · Independent Curator"
     },
     "profileLabel-fields": {
       "ko": "연구 분야",
@@ -342,7 +342,7 @@ window.TRANSLATIONS = {
       "en": "Ecological aesthetics, Actor–Network Theory (ANT), new materialism"
     },
     "educationHeading": {
-      "ko": "Education",
+      "ko": "교육경력",
       "en": "Education"
     },
     "education-phd": {
@@ -358,7 +358,7 @@ window.TRANSLATIONS = {
       "en": "1991 — BA in English Language and Literature, Hannam University"
     },
     "practiceHeading": {
-      "ko": "Practice",
+      "ko": "주요 경력",
       "en": "Practice"
     },
     "resume-career-0": {
@@ -374,7 +374,7 @@ window.TRANSLATIONS = {
       "en": "2013–present — Director, Center for Eco Aesthetics and Art Research (founded in 2013)"
     },
     "teachingHeading": {
-      "ko": "Teaching",
+      "ko": "강의 경력",
       "en": "Teaching"
     },
     "careerSource": {
@@ -424,6 +424,10 @@ window.TRANSLATIONS = {
     "watchVideo": {
       "ko": "YouTube에서 보기 ↗",
       "en": "Watch on YouTube ↗"
+    },
+    "aboutCuratorLabel": {
+      "ko": "전시기획자 소개",
+      "en": "ABOUT THE CURATOR"
     }
   },
   "exhibitions": {
@@ -679,7 +683,13 @@ window.TRANSLATIONS = {
     "researchProjects": {
       "작가조사연구비평사업 “Running Stage: 이연숙 작가조사연구사업”": {
         "title": "Running Stage: Lee Yeonsook Artist Research Project",
-        "publication": "Lead planner · Supported by Arts Council Korea"
+        "publication": "Lead planner · Supported by Arts Council Korea",
+        "links": [
+          {
+            "label": "ARKO Integrated Platform",
+            "url": "https://thearts.arko.or.kr/thearts/output/contents/SOC2025090900011"
+          }
+        ]
       },
       "국제교류플랫폼리서치사업 (영국·독일 예술기관 인터뷰)": {
         "title": "International Exchange Platform Research: Interviews with Arts Institutions in the UK and Germany",
@@ -691,15 +701,41 @@ window.TRANSLATIONS = {
       },
       "지역작가 매칭 사업 (강술생 작가 연구)": {
         "title": "Regional Artist Matching Project: Research on Kang Soolsaeng",
-        "publication": "Selected critic · National Museum of Modern and Contemporary Art, Korea"
+        "publication": "Selected critic · National Museum of Modern and Contemporary Art, Korea",
+        "links": [
+          {
+            "label": "MMCA Library catalogue",
+            "url": "https://www.mmca.go.kr/library/search/i-discovery/65218"
+          }
+        ]
       },
       "〈한국생태미술의 흐름과 현재: 자연미술에서 생태미술에 이르기까지〉 연구조사사업": {
         "title": "The Development and Current State of Korean Ecological Art: From Nature Art to Ecological Art",
-        "publication": "Lead researcher · National Museum of Modern and Contemporary Art, Korea"
+        "publication": "Lead researcher · National Museum of Modern and Contemporary Art, Korea",
+        "links": [
+          {
+            "label": "MMCA Art Shop book page",
+            "url": "https://www.mmcashop.co.kr/goods/goods_view.php?goodsNo=1000001443"
+          },
+          {
+            "label": "Publisher’s book introduction",
+            "url": "https://www.kongnpark.co.kr/books/view/9788963033105"
+          },
+          {
+            "label": "The Time of the Earth symposium (YouTube)",
+            "url": "https://www.youtube.com/watch?v=RWMV6HKRMwU"
+          }
+        ]
       },
       "〈횡단하는 물질의 세계〉전": {
         "title": "The World of Traversing Matter",
-        "publication": "Contributor · ARKO Art Center"
+        "publication": "Contributor · ARKO Art Center",
+        "links": [
+          {
+            "label": "ARKO Art Center exhibition page",
+            "url": "https://www.arko.or.kr/artcenter/board/view/510?bid=462&cid=711387"
+          }
+        ]
       }
     },
     "books": {
@@ -744,9 +780,6 @@ window.TRANSLATIONS = {
       "지구에 대한 감각을 일깨우는 생태예술가로서의 정재철": {
         "title": "Jung Jaechul as an Ecological Artist Awakening Our Sense of the Earth"
       },
-      "'끝섬', 바깥이 중심이 되는 헤테로토피아로의 여행": {
-        "title": "‘End Island’: A Journey to a Heterotopia Where the Outside Becomes the Centre"
-      },
       "지구라는 육체를 횡단하는 물질들의 생태교향곡: 흙 되기, 인간 되기, 문화의 자기조직화": {
         "title": "An Ecological Symphony of Matter Traversing the Body of the Earth: Becoming Soil, Becoming Human, and the Self-Organisation of Culture"
       },
@@ -770,6 +803,9 @@ window.TRANSLATIONS = {
       },
       "디지털 숭고의 풍경, “Vision Scenery”": {
         "title": "A Landscape of the Digital Sublime, “Vision Scenery”"
+      },
+      "‘끝섬’, 바깥이 중심이 되는 헤테로토피아로의 여행": {
+        "title": "‘End Island’: A Journey to a Heterotopia Where the Outside Becomes the Centre"
       }
     }
   }
