@@ -17,7 +17,7 @@ for (const file of ['index.html', 'css', 'js', 'images']) {
 }
 await writeFile(join(output, '_headers'), '/js/*\n  Cache-Control: public, max-age=0, must-revalidate\n/css/*\n  Cache-Control: public, max-age=0, must-revalidate\n');
 // Rewrites preserve all original query parameters (language and exhibition id).
-const legacy = ['exhibitions','exhibition','critique','reading','about','research'];
+const legacy = ['exhibitions','exhibition','critique','reading','about','research','contact'];
 await writeFile(join(output, '_redirects'), legacy.flatMap(page => [
   `/${page} /index.html 200!`, `/${page}.html /index.html 200!`
 ]).join('\n') + '\n');
