@@ -14,8 +14,8 @@ window.TRANSLATIONS = {
       "en": "Art, ecology and<br><span>a world shared.</span>"
     },
     "role": {
-      "ko": "유현주 — 미술평론가 · 독립 전시기획자",
-      "en": "HyunJu Yu — Art Critic · Independent Curator"
+      "ko": "유현주 — 미학 박사 · 미술평론가 · 독립 전시기획자",
+      "en": "HyunJu Yu — Ph.D. in Aesthetics · Art Critic · Independent Curator"
     },
     "browse": {
       "ko": "전시 아카이브 보기 ↗",
