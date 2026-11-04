@@ -1,4 +1,4 @@
-// English translations for the Korean archive.
+// Korean and English archive copy.
 window.TRANSLATIONS = {
   "static": {
     "skip": {
@@ -14,20 +14,20 @@ window.TRANSLATIONS = {
       "en": "Art, ecology and<br><span>a world shared.</span>"
     },
     "role": {
-      "ko": "유현주 — 전시기획자 · 미학 연구자",
-      "en": "Yu Hyunju — Curator & Aesthetics Researcher"
+      "ko": "유현주 — 미술평론가 · 독립 전시기획자",
+      "en": "HyunJu Yu — Art Critic · Independent Curator"
     },
     "browse": {
       "ko": "전시 아카이브 보기 ↗",
       "en": "Explore the archive ↗"
     },
     "bannerTitle": {
-      "ko": "불의 기억: 자연, 인간, 생명의 길, 2020",
-      "en": "Memory of Fire: Nature, Humans and the Path of Life, 2020"
+      "ko": "불의 기억: 자연, 인간, 생명의 길 · 2020",
+      "en": "Memory of Fire: Nature, Humans and the Path of Life · 2020"
     },
     "bannerCredit": {
-      "ko": "박봉기, 호흡 · 포트폴리오 수록 이미지",
-      "en": "Park Bonggi, Breathing · Image from the portfolio"
+      "ko": "박봉기 · 호흡 · 2020",
+      "en": "Park Bonggi · Breathing · 2020"
     },
     "viewExhibitions": {
       "ko": "전체 전시 보기 ↗",
@@ -38,8 +38,8 @@ window.TRANSLATIONS = {
       "en": "Exploring connections<br>between humans and nature through art."
     },
     "bio1": {
-      "ko": "유현주는 전시기획자이자 미학 연구자입니다. 생태미학예술연구소를 2013년 창립하고, 도시와 자연, 인간과 비인간의 관계를 전시와 연구를 통해 탐구해 왔습니다.",
-      "en": "Yu Hyunju is a curator and aesthetics researcher. She founded the Center for Eco Aesthetics and Art Research in 2013 and explores relationships between cities and nature, humans and nonhumans through exhibitions and research."
+      "ko": "유현주는 미학 박사이자 미술평론가, 독립 전시기획자입니다. 생태미학예술연구소를 2013년 창립하고, 도시와 자연, 인간과 비인간의 관계를 전시와 연구를 통해 탐구해 왔습니다.",
+      "en": "HyunJu Yu holds a Ph.D. in Aesthetics and works as an art critic and independent curator. She founded the Center for Eco Aesthetics and Art Research in 2013 and explores relationships between cities and nature, humans and nonhumans through her curatorial practice and research."
     },
     "bio2": {
       "ko": "《지속가능한 도시-꽃》 시리즈를 비롯해 제주 세계유산축전 아트프로젝트, 대청호환경미술제, 한국·캐나다 국제교류 전시를 기획했습니다.",
@@ -51,19 +51,19 @@ window.TRANSLATIONS = {
     },
     "viewResearch": {
       "ko": "연구 기록 보기 ↗",
-      "en": "View research & writings ↗"
+      "en": "View research ↗"
     },
     "footerPractice": {
       "ko": "전시기획 · 생태미학 · 동시대미술",
       "en": "Curating · Ecological Aesthetics · Contemporary Art"
     },
     "rights": {
-      "ko": "© Yu Hyunju. 이미지·작품의 권리는 각 권리자에게 있습니다.",
-      "en": "© Yu Hyunju. Images and artworks belong to their respective rights holders."
+      "ko": "© HyunJu Yu. 이미지·작품의 권리는 각 권리자에게 있습니다.",
+      "en": "© HyunJu Yu. Images and artworks belong to their respective rights holders."
     },
     "archiveIntro": {
-      "ko": "도시와 자연, 그리고 그 사이의 연결을 탐구한 전시 기록.",
-      "en": "An exhibition archive exploring cities, nature and the connections between them."
+      "ko": "주요 전시 기획",
+      "en": "Selected Curatorial Projects"
     },
     "year": {
       "ko": "연도",
@@ -74,8 +74,8 @@ window.TRANSLATIONS = {
       "en": "All years"
     },
     "researchIntro": {
-      "ko": "생태미학과 동시대미술을 잇는 연구와 글.",
-      "en": "Research and writing connecting ecological aesthetics and contemporary art."
+      "ko": "생태미학과 동시대미술을 잇는 연구·저술·학술활동.",
+      "en": "Research, publications and academic activities connecting ecological aesthetics and contemporary art."
     },
     "researchNote": {
       "ko": "수록 내용은 업로드된 포트폴리오 48–50쪽을 기준으로 정리했습니다. 국제생태예술세미나는 포트폴리오에 2026년 9월 예정으로 기재되어 있어, 개최 여부 확인 후 추가할 수 있습니다.",
@@ -306,7 +306,7 @@ window.TRANSLATIONS = {
       "en": "2004–2005 — Adjunct professor, College of Fine Arts, Mokwon University"
     },
     "personalHeading": {
-      "ko": "직업",
+      "ko": "프로필",
       "en": "Profile"
     },
     "profileLabel-name": {
@@ -314,8 +314,8 @@ window.TRANSLATIONS = {
       "en": "Name"
     },
     "profileValue-name": {
-      "ko": "유현주 (Yu HyunJu)",
-      "en": "Yu HyunJu"
+      "ko": "유현주 (HyunJu Yu)",
+      "en": "HyunJu Yu"
     },
     "profileLabel-email": {
       "ko": "이메일",
@@ -326,12 +326,12 @@ window.TRANSLATIONS = {
       "en": "adorno21@naver.com / hyunjuyu21@gmail.com"
     },
     "profileLabel-position": {
-      "ko": "직업",
-      "en": "Current roles"
+      "ko": "소속·직함",
+      "en": "Affiliations & Roles"
     },
     "profileValue-position": {
-      "ko": "한남대 연구교수 · 생태미학예술 연구소 소장 · 미술비평가 · 독립 전시기획자",
-      "en": "Research Professor, Hannam University · Director, Institute of Eco Aesthetics and Art · Art Critic · Independent Curator"
+      "ko": "한남대학교 인문과학연구소 연구교수 · 생태미학예술연구소 소장 · 미술평론가 · 독립 전시기획자",
+      "en": "Research Professor, Institute for Humanities, Hannam University · Director, Center for Eco Aesthetics and Art Research · Art Critic · Independent Curator"
     },
     "profileLabel-fields": {
       "ko": "연구 분야",
@@ -342,7 +342,7 @@ window.TRANSLATIONS = {
       "en": "Ecological aesthetics, Actor–Network Theory (ANT), new materialism"
     },
     "educationHeading": {
-      "ko": "교육경력",
+      "ko": "학력",
       "en": "Education"
     },
     "education-phd": {
@@ -359,7 +359,7 @@ window.TRANSLATIONS = {
     },
     "practiceHeading": {
       "ko": "주요 경력",
-      "en": "Practice"
+      "en": "Professional Experience"
     },
     "resume-career-0": {
       "ko": "2023–2026　이응노미술관 연구소 연구위원 역임",
@@ -375,19 +375,19 @@ window.TRANSLATIONS = {
     },
     "teachingHeading": {
       "ko": "강의 경력",
-      "en": "Teaching"
+      "en": "Teaching Experience"
     },
     "careerSource": {
       "ko": "현직·학력·주요 경력은 2026 국문 이력서 기준이며, 강의 경력은 기존 포트폴리오 기록을 함께 정리했습니다.",
       "en": "Current roles, education and principal appointments follow the 2026 Korean CV. Teaching records are retained from the earlier portfolio."
     },
     "curatorialHeading": {
-      "ko": "전시기획 기록",
-      "en": "Curatorial Record"
+      "ko": "주요 전시 기획",
+      "en": "Selected Curatorial Projects"
     },
     "seminarsHeading": {
       "ko": "세미나·학술행사",
-      "en": "Seminars & Academic Events"
+      "en": "Selected Seminars & Symposiums"
     },
     "projectsHeading": {
       "ko": "연구·비평 사업",
@@ -398,16 +398,16 @@ window.TRANSLATIONS = {
       "en": "Books"
     },
     "papersHeading": {
-      "ko": "논문",
-      "en": "Journal Articles"
+      "ko": "주요 논문",
+      "en": "Selected Publications"
     },
     "referenceTitles": {
       "ko": "영문 제목은 참고용 번역입니다.",
       "en": "English titles translated from Korean are provided for reference."
     },
     "critiqueIntro": {
-      "ko": "비평과 전시서문",
-      "en": "Criticism & Exhibition Essays"
+      "ko": "주요 비평",
+      "en": "Selected Writings"
     },
     "critiqueEmpty": {
       "ko": "비평문과 전시서문을 정리하고 있습니다.",
@@ -426,8 +426,56 @@ window.TRANSLATIONS = {
       "en": "Watch on YouTube ↗"
     },
     "aboutCuratorLabel": {
-      "ko": "전시기획자 소개",
-      "en": "ABOUT THE CURATOR"
+      "ko": "소개",
+      "en": "ABOUT"
+    },
+    "roleEyebrow": {
+      "ko": "미학 박사 · 미술평론가 · 독립 전시기획자",
+      "en": "Ph.D. in Aesthetics · Art Critic · Independent Curator"
+    },
+    "homeResearchHeading": {
+      "ko": "Research & Critique",
+      "en": "Research & Critique"
+    },
+    "homeResearchLabel": {
+      "ko": "연구와 비평",
+      "en": "RESEARCH & CRITIQUE"
+    },
+    "viewCritique": {
+      "ko": "비평 보기 ↗",
+      "en": "View critique ↗"
+    },
+    "degreeLabel": {
+      "ko": "학위",
+      "en": "Degree"
+    },
+    "degreeValue": {
+      "ko": "미학 박사",
+      "en": "Ph.D. in Aesthetics"
+    },
+    "contactIntro": {
+      "ko": "전시 기획, 비평 및 연구 관련 문의를 받습니다.",
+      "en": "For enquiries about exhibitions, criticism and research."
+    },
+    "domesticEnquiries": {
+      "ko": "국내 문의",
+      "en": "Inquiries in Korea"
+    },
+    "internationalEnquiries": {
+      "ko": "해외 문의",
+      "en": "International inquiries"
+    },
+    "contactEyebrow": {
+      "ko": "문의",
+      "en": "GET IN TOUCH"
+    },
+    "arkoSymposiumVideoTitle": {
+      "ko": "온라인 국제 심포지엄 2021 아르코 융복합 페스티벌 《횡단하는 물질의 세계》 연계 행사 모더레이터",
+      "en": "Moderator, Online International Symposium — 2021 ARKO Art & Tech Festival: Traversing the World of Matter"
+    },
+    "arkoSymposiumVideoMeta": {
+      "ko": "2021 · 모더레이터 · 6분 13초부터 재생",
+      "en": "2021 · Moderator · Starts at 6:13"
     }
   },
   "exhibitions": {
@@ -438,7 +486,7 @@ window.TRANSLATIONS = {
       "date": "22 October–1 November 2025",
       "description": "Reading Anna Tsing’s The Mushroom at the End of the World in the face of ecological crisis, the exhibition asks how life can regain vitality beyond disaster. Six artists imagine multispecies world-making, like mushrooms emerging from a ruined forest.",
       "source": "Exhibition cover-image summary and curatorial portfolio",
-      "note": "Korean spellings of participating artists’ names in the summary are awaiting confirmation.",
+      "note": "",
       "role": "Curator",
       "support": "Supported by the Daejeon Culture and Arts Foundation",
       "careerPeriod": "2025"
@@ -460,7 +508,7 @@ window.TRANSLATIONS = {
       "subtitle": "2023 Daecheong Lake Environmental Art Festival",
       "venue": "Munui Cultural Heritage Complex and Daecheong Lake waterfront, Cheongju",
       "date": "2023.05.03–06.18",
-      "description": "Part of the 2023 Daecheong Environmental Art Festival, the exhibition presented installations by seven artists around the waterfront of Daecheong Lake. Yu Hyunju co-curated the exhibition and wrote the catalogue text.",
+      "description": "Part of the 2023 Daecheong Environmental Art Festival, the exhibition presented installations by seven artists around the waterfront of Daecheong Lake. HyunJu Yu co-curated the exhibition and wrote the catalogue text.",
       "source": "Exhibition cover-image summary and curatorial portfolio",
       "note": "",
       "role": "Co-curator",
@@ -693,7 +741,13 @@ window.TRANSLATIONS = {
       },
       "국제교류플랫폼리서치사업 (영국·독일 예술기관 인터뷰)": {
         "title": "International Exchange Platform Research: Interviews with Arts Institutions in the UK and Germany",
-        "publication": "Interviewer · Supported by Arts Council Korea"
+        "publication": "Interviewer · Supported by Arts Council Korea",
+        "links": [
+          {
+            "label": "Arts Council Korea research report",
+            "url": "https://www.arko.or.kr/board/view/5040?bid=&cid=1805975&page="
+          }
+        ]
       },
       "R-다이얼로그 레지던시 (4개월, 김윤철 작가 연구)": {
         "title": "R-Dialogue Residency: Research on Kim Yunchul (four months)",
@@ -748,7 +802,7 @@ window.TRANSLATIONS = {
         "publication": "Communication Books · Sole author"
       },
       "『한국 생태미술의 흐름과 현재: 자연미술에서 생태미술에 이르기까지』 (유현주[책임연구원] 외)": {
-        "title": "The Development and Current State of Korean Ecological Art: From Nature Art to Ecological Art (Yu Hyunju, lead researcher, et al.)",
+        "title": "The Development and Current State of Korean Ecological Art: From Nature Art to Ecological Art (HyunJu Yu, lead researcher, et al.)",
         "publication": "MMCA Korea / Haejeok Press · Segeoreum · Co-author"
       },
       "『팬데믹 시대, 온라인 플랫폼과 예술』 (백경미 엮음 외)": {
@@ -756,7 +810,7 @@ window.TRANSLATIONS = {
         "publication": "Gaga Books · Co-author"
       },
       "『인공지능 시대의 예술』 (유현주 엮음)": {
-        "title": "Art in the Age of Artificial Intelligence (edited by Yu Hyunju)",
+        "title": "Art in the Age of Artificial Intelligence (edited by HyunJu Yu)",
         "publication": "b Publishing · Co-author"
       },
       "『지속 가능한 도시를 위한 열린 대화 — 도시와 나 그리고 우리를 위한 예술지침서』": {

@@ -28,13 +28,17 @@
     const copy = TRANSLATIONS.static[node.dataset.i18n];
     if (copy) node.innerHTML = copy[lang]; // Only locally authored static copy, never user input.
   });
+  document.querySelectorAll('[data-video-title]').forEach(node => {
+    const copy = TRANSLATIONS.static[node.dataset.videoTitle];
+    if (copy) node.title = copy[lang];
+  });
   document.querySelectorAll('.brand').forEach(node => {
     node.textContent = t('유현주 | 생태미학과 예술', 'HyunJu Yu | Eco-Aesthetics & Art');
   });
-  const titles = {index:'Art & Ecological Aesthetics',exhibitions:'Exhibitions',exhibition:'Exhibition',critique:'Critique',reading:'Read Critique',about:'About',research:'Research & Writings'};
+  const titles = {index:'Art & Ecological Aesthetics',exhibitions:'Exhibitions',exhibition:'Exhibition',critique:'Critique',reading:'Read Critique',about:'About',research:'Research',contact:'Contact'};
   const page = window.CURRENT_PAGE || 'index';
-  if (en) document.title = (titles[page] || titles.index) + ' | Yu Hyunju';
-  document.querySelector('meta[name="description"]').content = t('유현주 전시기획자와 미학 연구자의 전시, 생태미학 연구 및 저술 아카이브.', 'Exhibitions, ecological aesthetics research and writings by curator and aesthetics researcher Yu Hyunju.');
+  if (en) document.title = page === 'index' ? 'HyunJu Yu | Eco-Aesthetics & Art' : (titles[page] || titles.index) + ' | HyunJu Yu';
+  document.querySelector('meta[name="description"]').content = t('유현주 미술평론가와 독립 전시기획자의 전시, 생태미학 연구 및 저술 아카이브.', 'Exhibitions, ecological aesthetics research and writings by art critic and independent curator HyunJu Yu.');
   document.querySelector('#navigation').setAttribute('aria-label', t('주 메뉴', 'Main navigation'));
   document.querySelector('.language-switch').setAttribute('aria-label', t('언어 선택', 'Select language'));
   document.querySelectorAll('[data-language]').forEach(a => {

@@ -2,9 +2,10 @@
 window.PORTFOLIO = {
   "profile": {
     "name": "유현주",
-    "english": "Yu Hyunju",
-    "role": "전시기획자 · 미학 연구자",
-    "email": "adorno21@naver.com"
+    "english": "HyunJu Yu",
+    "role": "미술평론가 · 독립 전시기획자",
+    "email": "adorno21@naver.com",
+    "internationalEmail": "hyunjuyu21@gmail.com"
   },
   "exhibitions": [
     {
@@ -33,7 +34,7 @@ window.PORTFOLIO = {
       "date": "2025.10.22~11.01",
       "description": "인류세의 생태 위기 앞에서, 안나 칭의 『세계 끝의 버섯』을 읽으며 재난을 넘어 삶의 활력을 되살리는 방식을 묻는다. 폐허가 된 숲에서 자라나는 송이버섯처럼 인간과 비인간이 함께 만들어 가는 ‘다종의 세계 만들기’를 여섯 작가의 작업으로 상상한다.",
       "source": "기획 전시 대표이미지·요약표 및 기획자 포트폴리오",
-      "note": "요약표의 참여작가 한글 표기는 확인 중입니다.",
+      "note": "",
       "role": "기획",
       "support": "대전문화재단 후원",
       "careerPeriod": "2025",
@@ -155,7 +156,7 @@ window.PORTFOLIO = {
       "series": "city-flower",
       "captions": {
         "images/exhibitions/city-flower-iv-artwork-01.jpg": "김나현 벗어나기 2018",
-        "images/exhibitions/city-flower-iv-artwork-02.jpg": "송인 강제된 침묵 너만 조용하면 돼 2016",
+        "images/exhibitions/city-flower-iv-artwork-02.jpg": "송인 강제된 침묵 - 너만 조용하면 돼 2016",
         "images/exhibitions/city-flower-iv-artwork-03.jpg": "이선화 Becoming 2017",
         "images/exhibitions/city-flower-iv-artwork-04.jpg": "이선화_접히고 주름진 그 곳_2018",
         "images/exhibitions/city-flower-iv-artwork-05.jpg": "이연숙 Space_Fluid moment 2017",
@@ -496,7 +497,13 @@ window.PORTFOLIO = {
       "year": "2022",
       "title": "국제교류플랫폼리서치사업 (영국·독일 예술기관 인터뷰)",
       "publication": "인터뷰어 · 한국문화예술위원회 후원",
-      "source": ""
+      "source": "",
+      "links": [
+        {
+          "label": "한국문화예술위원회 결과보고서",
+          "url": "https://www.arko.or.kr/board/view/5040?bid=&cid=1805975&page="
+        }
+      ]
     },
     {
       "year": "2021",

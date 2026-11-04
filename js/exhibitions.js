@@ -43,7 +43,7 @@
   const item = items.find(i => i.id === id);
   const back = el('a', t('← 전시 목록', '← All exhibitions'), 'text-link'); back.href = link('index.html?page=exhibitions'); detail.append(back);
   if (!item) { detail.append(el('h1', t('전시를 찾을 수 없습니다.', 'Exhibition not found.'), 'detail-head'), el('p', t('전시 목록에서 다시 선택해 주세요.', 'Please choose an exhibition from the archive.'))); return; }
-  document.title = item.title + t(' | 유현주', ' | Yu Hyunju');
+  document.title = item.title + t(' | 유현주', ' | HyunJu Yu');
   document.querySelector('meta[name="description"]').content = item.description;
   const head = el('header', undefined, 'detail-head'); head.append(el('p', item.yearLabel + ' / EXHIBITION', 'eyebrow'), el('h1', item.title), el('p', item.subtitle, 'subtitle')); detail.append(head);
   const info = el('div', undefined, 'detail-info'); const dl = el('dl');
@@ -61,7 +61,7 @@
     const figure = el('figure');
     const button = el('button'); button.type='button'; button.setAttribute('aria-label',t(item.title+' 이미지 '+(index+1)+' 확대', 'Enlarge '+item.title+' image '+(index+1)));
     const img = el('img'); img.src=src; img.alt=caption || item.title+t(' — 포트폴리오 수록 이미지 ', ' — portfolio image ')+(index+1); img.loading='lazy';button.append(img);
-    button.addEventListener('click', () => { const large=dialog.querySelector('img');large.src=src;large.alt=img.alt;dialog.querySelector('p').textContent=(index+1)+' / '+item.gallery.length+' · '+(caption || item.source);dialog.showModal(); });
+    button.addEventListener('click', () => { const large=dialog.querySelector('img');large.src=src;large.alt=img.alt;const label=dialog.querySelector('p');label.textContent=caption;label.hidden=!caption;dialog.showModal(); });
     figure.append(button);
     if (caption) figure.append(el('figcaption', caption));
     gallery.append(figure);
