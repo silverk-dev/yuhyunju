@@ -860,6 +860,9 @@ window.TRANSLATIONS = {
       },
       "‘끝섬’, 바깥이 중심이 되는 헤테로토피아로의 여행": {
         "title": "‘End Island’: A Journey to a Heterotopia Where the Outside Becomes the Centre"
+      },
+      "자연과 조응하는 삶과 예술, 허윤희의 월든": {
+        "title": "Life and Art in Harmony with Nature: Heo Yunhee’s Walden"
       }
     }
   }
