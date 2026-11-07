@@ -87,19 +87,31 @@
     head.append(makeElement('p', item.year + ' / CRITIQUE', 'eyebrow'), makeElement('h1', item.title));
     head.append(makeElement('p', t('열람용 문서 · ', 'Reading copy · ') + item.pages.length + t('쪽', ' pages'), 'lead'));
     reading.append(head);
+    document.body.classList.add('reading-document');
     const pages = makeElement('div', undefined, 'reading-pages');
+    // Discourage casual image saving; browser content cannot prevent OS screenshots.
+    for (const eventName of ['contextmenu', 'dragstart']) {
+      pages.addEventListener(eventName, event => {
+        if (event.target.closest('.reading-image')) event.preventDefault();
+      });
+    }
     item.pages.forEach((page, i) => {
       const figure = makeElement('figure', undefined, 'reading-page');
       const img = makeElement('img'); img.src = page.image; img.alt = t('문서 ', 'Document page ') + (i + 1) + t('쪽', '');
       img.loading = i === 0 ? 'eager' : 'lazy'; img.draggable = false;
       const caption = makeElement('figcaption', (i + 1) + ' / ' + item.pages.length);
-      figure.append(img, caption);
+      const image = makeElement('div', undefined, 'reading-image');
+      const shield = makeElement('span', undefined, 'reading-image-shield');
+      shield.setAttribute('aria-hidden', 'true');
+      image.append(img, shield);
+      figure.append(image, caption);
       if (page.text) {
         const text = makeElement('details', undefined, 'reading-text');
         text.append(makeElement('summary', t('텍스트로 읽기', 'Read as text')), makeElement('p', page.text)); figure.append(text);
       }
       pages.append(figure);
     });
-    reading.append(pages);
+    const printNotice = makeElement('p', t('이 문서는 웹 열람용으로 제공되며 인쇄 및 PDF 저장을 지원하지 않습니다.', 'This document is provided for online reading. Printing and saving as PDF are not supported.'), 'reading-print-notice');
+    reading.append(pages, printNotice);
   }
 })();
